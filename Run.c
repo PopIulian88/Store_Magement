@@ -8,6 +8,8 @@
 #include "./Interfaces/Admin/AdminInterface.c"
 #include "./Interfaces/Pleb/PlebInterface.c"
 #include "./Interfaces/Admin/AdminVerification.c"
+#include "./Color.c"
+
 
 int main()
 {
@@ -28,7 +30,9 @@ int main()
                 else //Altfel afisam faptul ca este gresita parola
                 {
                     system("CLS");
+                    setColorTo(1); // ROSU
                     printf("\n\n   INCORET PASSWORD\n\n");
+                    setColorTo(0); // DEFAULT
                     system("pause");
                 }
                 break;
@@ -45,3 +49,6 @@ int main()
 
     return 0;
 }
+
+//Color link: https://learn.microsoft.com/en-us/windows/console/console-screen-buffers#character-attributes
+// How to use them: https://dev.to/tenry/terminal-colors-in-c-c-3dgc

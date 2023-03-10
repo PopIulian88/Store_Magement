@@ -10,19 +10,39 @@ char utilizator[NUMAR_TIPURI_UTILIZATORI][1][10] ={ //Meniul de user initial
 void printInterface()
 {
     system("CLS");
-    printf("_=* WELCOME *=_\n\n");
+
+    setColorTo(4); //GALBEN
+
+    printf("~~~~~~~~~~~~~~~~~\n");
+    printf("  $$ WELCOME $$  \n");
+    printf("~~~~~~~~~~~~~~~~~\n\n");
+
+    setColorTo(3); //CYAN
+    printf("Select:\n");
+    setColorTo(6); //CYAN
 
     for(int i = 0; i < NUMAR_TIPURI_UTILIZATORI; i++) //Afisam posibilitatile pe ecran
     {
+        printf("______________\n");
         if(i == selectedUser)   //Daca posibilitatea pe care o afisam e cea selectata
         {                       //punem un caracter special in fata ei
-            printf(" >>");
+            setColorTo(2); // VERDE
+            printf("  >>");
+            setColorTo(5); // ROZ
+            printf(" %s\n", utilizator[i][0]);
+            setColorTo(6); // CYAN
+        }else{
+            setColorTo(3); //ALBASTRU
+            printf("   %s\n", utilizator[i][0]);
+            setColorTo(6); // CYAN
         }
-        printf("  %s\n", utilizator[i][0]);
     }
+    printf("______________\n");
 
-    printf("\nPentru a naviga puteti folosi SAGETi\n");
-
+    setColorTo(3); // ALBASTRU
+    printf("\nFoloseste: W, S sau SAGETILE pentru a naviga.\n");
+    printf("Apasa ENTER pentru a confirma\n");
+    setColorTo(0); // DEFAULT
 }
 
 int selectUserInterface()
