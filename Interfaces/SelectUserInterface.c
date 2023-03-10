@@ -1,6 +1,6 @@
 #define NUMAR_TIPURI_UTILIZATORI 3
 
-int selectedUser = 0;
+int selectedUser = 0; // Indicele elementului curent
 char utilizator[NUMAR_TIPURI_UTILIZATORI][1][10] ={ //Meniul de user initial
     {"Admin"},
     {"Pleb"},
@@ -9,32 +9,34 @@ char utilizator[NUMAR_TIPURI_UTILIZATORI][1][10] ={ //Meniul de user initial
 
 void printInterface()
 {
-    system("cls");
+    system("CLS");
     printf("_=* WELCOME *=_\n\n");
 
-    for(int i = 0; i < NUMAR_TIPURI_UTILIZATORI; i++)
+    for(int i = 0; i < NUMAR_TIPURI_UTILIZATORI; i++) //Afisam posibilitatile pe ecran
     {
-        if(i == selectedUser)
-        {
+        if(i == selectedUser)   //Daca posibilitatea pe care o afisam e cea selectata
+        {                       //punem un caracter special in fata ei
             printf(" >>");
         }
         printf("  %s\n", utilizator[i][0]);
     }
 
-    printf("\nPress W for up, S for down\n");
+    printf("\nPentru a naviga puteti folosi SAGETi\n");
 
 }
 
 int selectUserInterface()
 {
-    printInterface();
 
-    while(TRUE)
+    int fleg = 1;
+    while(fleg) //Cat timp e activa putem naviga in meniu
     {
-        int key_code = _getch();
+        printInterface(); // afisam interfata curenta
+        
+        int key_code = _getch(); // primim input de la tastatura
 
-        switch(key_code){
-                
+        switch(key_code)
+        {   
             case 'w': case 'W': case 72: // UP
                 selectedUser--;
                 if(selectedUser < 0)
@@ -49,10 +51,10 @@ int selectUserInterface()
                 break;
                 
             case 13: // ENTER
-                return selectedUser;
-        }
-        printInterface();  
+                fleg = 0; //Cand apasam enter iesim din aceasta bucla
+                break;
+        } 
     }
     
-    return 0;
+    return selectedUser; // returnam valoarea selectata
 }

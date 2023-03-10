@@ -6,6 +6,10 @@
 
 int main()
 {   
-    printf("%c", 38);
+    char ceva[5];
+
+    scanf("%s", &ceva);
+
+    printf("%d", strlen(ceva));
     return 0;
 }
