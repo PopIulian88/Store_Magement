@@ -1,4 +1,7 @@
 #include "./SelectAdminMenu.c"
+#include "./FunctiAdmin/MarfaInterfaceAdmin.c"
+#include "./FunctiAdmin/AdaugaInterfaceAdmin.c"
+#include "./FunctiAdmin/StergeInterfaceAdmin.c"
 
 void adminInterface()
 {
@@ -9,17 +12,19 @@ void adminInterface()
 
         switch(userNumberAdmin) // Vedem interfata selectata
         {
-            case 0: // 
-                    system("CLS");
-                    printf("CAZUL 0 CU SUCCES");
+            case 0: // MARFA
+                marfaInterfaceAdmin();
                 break;
 
-            case 1: // 
-                system("CLS");
-                    printf("CAZUL 1 CU SUCCES");
+            case 1: // ADAUGA
+                adaugaInterfaceAdmin();
                 break;
 
-            case 2: // EXIT
+            case 2: // STERGE
+                stergeInterfaceAdmin();
+                break;
+                
+            case 3: // BACK
                 flagAdmin = 0; // Iesim din aplicatie
                 break;
         }

@@ -3,7 +3,7 @@
 char plebTitle[] = "PLEB";
 int optionSelectedPleb = 0;
 char menuPreb[NR_ELEMENTE_PLEB][100]={
-    "Afisaza Lista",
+    "Shop",
     "Cos",
     "BACK",
 };

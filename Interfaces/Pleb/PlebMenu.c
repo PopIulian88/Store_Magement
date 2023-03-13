@@ -1,4 +1,6 @@
 #include "./SelectPlebMenu.c"
+#include "./FunctiPleb/ShopInterfacePleb.c"
+#include "./FunctiPleb/CosInterfacePleb.c"
 
 void plebInterface()
 {
@@ -9,12 +11,12 @@ void plebInterface()
         
         switch(userNumberPleb) // Vedem interfata selectata
         {
-            case 0: // 
-                
+            case 0: // SHOP
+                shopInterfacePleb();
                 break;
 
-            case 1: // 
-
+            case 1: // COS
+                cosInterfacePleb();
                 break;
 
             case 2: // EXIT
