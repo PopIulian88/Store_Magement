@@ -1,15 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-
+#include "AfisText.c"
 
 int main()
-{   
-    char ceva[5];
-
-    scanf("%s", &ceva);
-
-    printf("%d", strlen(ceva));
+{  
+    afisFile("Storage/Produse.txt", 0); 
+    
     return 0;
 }
