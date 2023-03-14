@@ -1,7 +1,7 @@
 #include "./SelectAdminMenu.c"
 #include "./FunctiAdmin/MarfaInterfaceAdmin.c"
 #include "./FunctiAdmin/AdaugaInterfaceAdmin.c"
-#include "./FunctiAdmin/StergeInterfaceAdmin.c"
+
 
 void adminInterface()
 {
@@ -19,12 +19,8 @@ void adminInterface()
             case 1: // ADAUGA
                 adaugaInterfaceAdmin();
                 break;
-
-            case 2: // STERGE
-                stergeInterfaceAdmin();
-                break;
                 
-            case 3: // BACK
+            case 2: // BACK
                 flagAdmin = 0; // Iesim din aplicatie
                 break;
         }

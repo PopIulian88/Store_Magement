@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-void afisFile(char fileName[], int curentPosition)
+int afisFile(char fileName[], int curentPosition)
 {
-    int count = 1;
+    int count = 0;
     FILE *pointer;
     char data[100];
     pointer = fopen(fileName, "r");
@@ -20,5 +20,5 @@ void afisFile(char fileName[], int curentPosition)
         }
         fclose(pointer);
     }
-
+    return count;
 }

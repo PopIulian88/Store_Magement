@@ -1,3 +1,9 @@
+BACK
 Rosi 10 2.99
 Pui 5 21.81
 Maioneza 15 8.69
+Caise 10 4.99
+ROLE 5 35.69
+Cuie 100 1.00
+Cartofi 20 21.00
+Role 50 15.99

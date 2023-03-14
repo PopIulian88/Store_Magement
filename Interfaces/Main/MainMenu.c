@@ -10,6 +10,11 @@
 #include "../Admin/AdminVerification.c"
 #include "../../Color.c"
 #include "../AfisInterfata.c"
+#include "../AfisText.c"
+#include "./AddItemToList.c"
+#include "./DeleteItemFromList.c"
+#include "./GetInformation.c"
+
 
 void runMain()
 {

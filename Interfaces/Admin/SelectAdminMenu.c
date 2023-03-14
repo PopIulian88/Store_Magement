@@ -1,11 +1,10 @@
-#define NR_ELEMENTE_ADMIN 4 //Setarile initiale pentru PLEB
+#define NR_ELEMENTE_ADMIN 3 //Setarile initiale pentru ADMIN
 
 char adminTitle[] = "ADMIN";
 int optionSelectedAdmin = 0;
 char menuAdmin[NR_ELEMENTE_ADMIN][100] = {
     "Marfa",
     "Adauga produse noi",
-    "Sterge produse",
     "BACK",
 };
 
