@@ -1,10 +1,9 @@
 #include "./EditareMarfa/EditareMenu.c"
 #include "./EditareMarfa/SelectEditare.c"
 
-int produsActual = 0;
-
 void marfaInterfaceAdmin()
 {
+    int produsActual = 0;
     int fleg = 1;
     while(fleg) //Cat timp e activa putem naviga
     {

@@ -31,4 +31,4 @@ void getPositionInfo(char listName[], int curentPosition, char changedName[])
 
 //     char *oldName = strtok(oldSir, " ");
 //     char *oldCantitate = strtok(NULL, " ");
-//     char *oldPret = strtok(NULL, " ");
+//     char *oldPret = strtok(NULL, "\n");

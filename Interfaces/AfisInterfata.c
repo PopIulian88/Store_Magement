@@ -9,9 +9,9 @@ void afisiazaInterfata(char posibilitati[][100], int nrPosibilitati, int posibil
     printf(" $$  \n");
     printf("~~~~~~~~~~~~~~~~~\n\n");
 
-    setColorTo(3); //CYAN
-    printf("Select:\n");
     setColorTo(6); //CYAN
+    printf("Select:\n");
+    setColorTo(3); //ALBASTRU
 
     for(int i = 0; i < nrPosibilitati; i++) //Afisam posibilitatile pe ecran
     {
@@ -22,16 +22,16 @@ void afisiazaInterfata(char posibilitati[][100], int nrPosibilitati, int posibil
             printf("  >>");
             setColorTo(5); // ROZ
             printf(" %s\n", posibilitati[i]);
-            setColorTo(6); // CYAN
+            setColorTo(3); // ALBASTRU
         }else{
-            setColorTo(3); //ALBASTRU
+            setColorTo(6); //CYAN
             printf("   %s\n", posibilitati[i]);
-            setColorTo(6); // CYAN
+            setColorTo(3); // ALBASTRU
         }
     }
     printf("______________\n");
 
-    setColorTo(3); // ALBASTRU
+    setColorTo(6); // CYAN
     printf("\nFoloseste: W, S sau SAGETILE pentru a naviga.\n");
     printf("Apasa ENTER pentru a confirma\n");
     setColorTo(0); // DEFAULT

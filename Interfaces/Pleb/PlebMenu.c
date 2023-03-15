@@ -1,6 +1,8 @@
 #include "./SelectPlebMenu.c"
 #include "./FunctiPleb/ShopInterfacePleb.c"
 #include "./FunctiPleb/CosInterfacePleb.c"
+#include "./FunctiPleb/EditareMenuPleb/AdaugaCosPleb.c"
+#include "./FunctiPleb/EditareMenuPleb/AddItemToCos.c"
 
 void plebInterface()
 {
