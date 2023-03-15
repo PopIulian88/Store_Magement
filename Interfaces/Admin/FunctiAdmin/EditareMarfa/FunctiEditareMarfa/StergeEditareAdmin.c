@@ -16,6 +16,12 @@ void stergereEditareAdmin(int myPosition)
             case '1':
                 deleteItemFromList("Storage/Produse.txt", myPosition); //#Main/DeleteItemFromList
                 flagConfirm = 0;
+
+                system("CLS"); // Confirmare modificari
+                setColorTo(2);
+                printf("\n\n  STERGERE EFECTUATA CU SUCCES\n\n");
+                setColorTo(0);
+                system("pause");
                 break;
             case '2':
                 flagConfirm = 0;

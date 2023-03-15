@@ -28,4 +28,10 @@ void modificaPretEditare(int myPosition)
     addItemToList("Storage/Produse.txt", oldName, oldCantitate, pretNou);
     deleteItemFromList("Storage/Produse.txt", myPosition);
 
+    system("CLS"); // Confirmare modificari
+    setColorTo(2);
+    printf("\n\n  MODIFICARE EFECTUATA CU SUCCES\n\n");
+    setColorTo(0);
+    system("pause");
+
 }

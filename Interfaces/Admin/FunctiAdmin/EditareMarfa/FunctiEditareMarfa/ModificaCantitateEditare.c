@@ -41,7 +41,7 @@ void modificaCantitateEditare(int myPosition)
         scanf("%s", &cantitateNoua);
         int corect = atoi(cantitateNoua);
 
-        if(corect <= 0 || corect >= 100000)
+        if(corect < 0 || corect >= 100000)
         {
             printf("\nACEASTA CANTITATE NU POATE FI PLASATA\n");
             printf("INCEARCA DIN NOU\n\n");
@@ -63,4 +63,10 @@ void modificaCantitateEditare(int myPosition)
     //adaugam in lista sirul cu noua cantitate si stergem linia veche
     addItemToList("Storage/Produse.txt", oldName, cantitateNoua, oldPret);
     deleteItemFromList("Storage/Produse.txt", myPosition);
+
+    system("CLS"); // Confirmare modificari
+    setColorTo(2);
+    printf("\n\n  MODIFICARE EFECTUATA CU SUCCES\n\n");
+    setColorTo(0);
+    system("pause");
 }
