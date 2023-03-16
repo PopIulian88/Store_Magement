@@ -21,6 +21,7 @@ void stergeProdusCos(int myProduct)
                 char *oldName = strtok(oldSir, " ");
                 char *oldCantitate = strtok(NULL, " ");
                 char *oldPret = strtok(NULL, "\n");
+                
 
                 deleteItemFromList("Storage/Cos.txt", myProduct); //#Main/DeleteItemFromList
                 

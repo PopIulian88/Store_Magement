@@ -1,6 +1,6 @@
 
-void deleteItemFromList(char listName[], int nrItem)
-{
+void deleteItemFromList(char listName[], int nrItem) // ACEASTA FUNCTIE E POSIBIL SA MODIFICE UN ELEMENT DIN SIRUL DAT
+{                                                   // DE PREFERAT DE FOLOSIT LA FINAL DE FUNCTIE
     if(nrItem == 0)
         return;
 
