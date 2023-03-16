@@ -1,19 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 #include <string.h>
 
-#include "./Interfaces/Main/GetInformation.c"
+#include "./Interfaces/Pleb/FunctiPleb/EditareMenuCos/FunctiCos/PretFinal.c"
 
 
 int main()
 {  
-    char oldSir[100000];
-    getPositionInfo("Storage/Produse.txt", 4, oldSir);
+    double pret = pretFinal("Storage/Cos.txt");
 
-    char *oldName = strtok(oldSir, " ");
-    char *oldCantitate = strtok(NULL, " ");
-    char *oldPret = strtok(NULL, "\n");
-    printf("Vechiul este: %s, %s, %s", oldName, oldCantitate, oldPret);
-    printf("Vechiul este: %s, %s, %s", oldName, oldCantitate, oldPret);
+    printf("%lf", pret);
     return 0;
 }
