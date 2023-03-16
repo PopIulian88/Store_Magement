@@ -1,11 +1,16 @@
-void adaugaCosPleb(int myPosition, int addCantitate) // Adauga cantitatea, iar daca "addCantitae" != 0 adauga o cantitate data
-{
+int adaugaCosPleb(int myPosition, int addCantitate) // Adauga cantitatea, iar daca "addCantitae" != 0 adauga o cantitate data
+{ //Returneaza 1 daca produsul a fost adaugat cu succes
     char oldSir[100000];
     getPositionInfo("Storage/Produse.txt", myPosition, oldSir);
 
     char *oldName = strtok(oldSir, " ");
     char *oldCantitate = strtok(NULL, " ");
     char *oldPret = strtok(NULL, "\n");
+
+    if(atoi(oldCantitate) <= 0)
+    {
+        return 0; 
+    }
 
     if(addCantitate == 0){
         addItemToList("Storage/Cos.txt", oldName, oldCantitate, oldPret); // adaug cantitatea dorita in cos
@@ -43,4 +48,5 @@ void adaugaCosPleb(int myPosition, int addCantitate) // Adauga cantitatea, iar d
         addItemToList("Storage/Produse.txt", oldName, cantitateaRamasa, oldPret);
         deleteItemFromList("Storage/Produse.txt", myPosition);
     }
+    return 1; //Daca sa ajuns la final produsul a fost adaugat cu succes
 }

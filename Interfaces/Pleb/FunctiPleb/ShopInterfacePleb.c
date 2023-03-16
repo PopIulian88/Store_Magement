@@ -46,14 +46,22 @@ void shopInterfacePleb()
             {
                 case '1': // Daca pleb-ul alege ca vrea sa adauge in cos
 
-                    adaugaCosPleb(produsActual, 1); // adaugam cu (1) = o sa adaugam noi cantitatea care se adauga
-                    flagConfirm = 0;
+                    int finalizatCuSucces = adaugaCosPleb(produsActual, 1); // #include 'Pleb/FunctiPleb/EditareMenu' adaugam cu (1) = o sa adaugam noi cantitatea care se adauga
+                    
+                    if(finalizatCuSucces == 1) // daca a fost finalizat cu succes
+                    {
+                        system("CLS"); // Confirmare modificari
+                        setColorTo(2);
+                        printf("\n\n  PRODUS ADAUGAT CU SUCCES\n\n");
+                        setColorTo(0);
+                        system("pause");
+                    }else{ // daca nu a fost finalizat cu succes
+                        system("CLS");
+                        printf("\n\n  STOC EPUIZAT\n\n");
+                        system("pause");
+                    }
 
-                    system("CLS"); // Confirmare modificari
-                    setColorTo(2);
-                    printf("\n\n  PRODUS ADAUGAT CU SUCCES\n\n");
-                    setColorTo(0);
-                    system("pause");
+                    flagConfirm = 0;
                     break;
                 case '2':
                     flagConfirm = 0;
