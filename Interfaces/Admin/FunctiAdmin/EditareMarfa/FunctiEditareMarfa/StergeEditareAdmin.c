@@ -2,9 +2,12 @@
 void stergereEditareAdmin(int myPosition)
 {
     system("CLS");
-    printf("\n\n SUNTETI SIGUR?\n\n");
+    setColorTo(4); // GALBEN
+    printf("\n  DORITI SA STERGETI PRODUSUL?\n\n");
+    setColorTo(6); // CYAN
     printf("  Apasa 1 pentru DA \n");
     printf("  Apasa 2 pentru NU\n\n");
+    setColorTo(0); // DEFAULT
 
     int flagConfirm = 1;
 

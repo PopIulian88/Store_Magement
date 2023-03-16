@@ -11,11 +11,26 @@ int afisFile(char fileName[], int curentPosition)
     {
         printf("Fail to open file");
     }else{
+        setColorTo(4); // GALBEN
+        printf("\n     PRODUSE\n\n");
+        setColorTo(0); // DEFAULT
+
         while(fgets(data, 100, pointer))
         {
             if(curentPosition == count)
+            {
+                setColorTo(5); // ROZ
                 printf(" >> ");
-            printf("%s", data);
+                setColorTo(0); // DEFAULT
+            }
+            if(count == 0) // Cazul BACK
+                setColorTo(1); // ROSU
+            else
+                setColorTo(6); // CYAN
+            printf("  %s", data);
+            setColorTo(3); // ALBASTRU
+            printf("_______________________\n");
+            setColorTo(0); // DEFAULT
             count++;
         }
         fclose(pointer);

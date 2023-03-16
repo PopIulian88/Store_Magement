@@ -2,10 +2,14 @@
 void modificaCantitateEditare(int myPosition)
 {
     system("CLS");
-
-    printf("\n\n ADAUGI sau SCOTi?\n\n");
+    setColorTo(4); // GALBEN
+    printf("\n CE DORESTI SA FACI CU STOCUL?\n\n");
+    setColorTo(6); // CYAN
     printf("  Apasa 1 pentru ADAUGARE \n");
     printf("  Apasa 2 pentru SCOATERE\n\n");
+    setColorTo(1); // ROSU
+    printf("  Apasa 0 pentru BACK\n\n");
+    setColorTo(0); // DEFAULT
 
     int adauga;
 
@@ -24,6 +28,9 @@ void modificaCantitateEditare(int myPosition)
                 adauga = 0; // SCADE
                 flagConfirm = 0;
                 break;
+            case '0':
+                return;
+                break;
         }
     }
 
@@ -37,14 +44,19 @@ void modificaCantitateEditare(int myPosition)
     int flagCantitate = 1;
     char cantitateNoua[100000];
     do{ // Verificari pentru Cantitate
+        setColorTo(6); // CYAN
         printf("Introdu cantitate: ");
+        setColorTo(5); // ROZ
         scanf("%s", &cantitateNoua);
+        setColorTo(0); // DEFAULT
         int corect = atoi(cantitateNoua);
 
-        if(corect < 0 || corect >= 100000)
+        if(corect <= 0 || corect >= 100000)
         {
+            setColorTo(1); // ROSU
             printf("\nACEASTA CANTITATE NU POATE FI PLASATA\n");
             printf("INCEARCA DIN NOU\n\n");
+            setColorTo(0); // DEFAULT
         }else{
             if(adauga == 1)
                 corect = atoi(oldCantitate) + corect; // se aduna cantitatea adaugata peste cea recenta

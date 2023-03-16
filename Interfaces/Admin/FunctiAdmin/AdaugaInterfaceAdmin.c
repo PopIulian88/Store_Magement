@@ -4,14 +4,17 @@ void adaugaInterfaceAdmin()
     char nume[50], cantitate[100000], pret[100000];
 
     system("CLS");
-    printf("Introdu produsul:\n\n");
+    setColorTo(4); //GALBEN
+    printf("\n\n  DETALI PRODUS:\n\n");
 
     flag = 0;
     do{ // Verificare Nume
+        setColorTo(6); // CYAN
         printf("Nume: ");
         fflush(stdin);
+        setColorTo(5); // ROZ
         gets(nume);
-        //scanf("%s", &nume);
+        setColorTo(0); // DEFAULT
 
     for (int i = 0; nume[i]!='\0'; i++){ // Modificari nume
         if(nume[i] >= 'a' && nume[i] <= 'z') // toUpperCase
@@ -45,8 +48,8 @@ void adaugaInterfaceAdmin()
         }
         fclose(pointer);
     }
-    //Daca nu am gasit numele inseamna ca numele e corect
-    if(corect == 0)
+    //Daca nu am gasit numele inseamna ca numele nu e introdus
+    if(corect == 0) // Produsul este deja introdus
     {
         system("CLS"); // Nume incorect
         setColorTo(1);
@@ -61,14 +64,19 @@ void adaugaInterfaceAdmin()
 
     flag = 1;
     do{ // Verificari pentru Cantitate
+        setColorTo(6); // CYAN
         printf("Cantitate: ");
+        setColorTo(5); // ROZ
         scanf("%s", &cantitate);
+        setColorTo(0); // DEFAULT
         int corect = atoi(cantitate);
 
         if(corect <= 0 || corect >= 100000)
         {
+            setColorTo(1); // ROSU
             printf("\nACEASTA CANTITATE NU POATE FI PLASATA\n");
             printf("INCEARCA DIN NOU\n\n");
+            setColorTo(0); // DEFAULT
         }else{
             flag = 0;
             sprintf(cantitate, "%d", corect); // int to string
@@ -77,13 +85,18 @@ void adaugaInterfaceAdmin()
 
     flag = 1;
     do{ // Verificari pentru pret
+        setColorTo(6); // CYAN
         printf("Pret: ");
+        setColorTo(5); // ROZ
         scanf("%s", &pret);
+        setColorTo(0); // DEFAULT
         double corect = atof(pret);
         if(corect <= 0 || corect >= 100000)
         {
+            setColorTo(1); //ROSU
             printf("\nACEST PRET NU ESTE VALID\n");
             printf("INCEARCA IAR\n\n");
+            setColorTo(0); // DEFAULT
         }else{
             flag = 0;
             sprintf(pret, "%.2f", corect); // float to string

@@ -5,13 +5,18 @@ void modificaPretEditare(int myPosition)
     int flag = 1;
     char pretNou[100000];
     do{ // Verificari pentru pret
+        setColorTo(4);
         printf("\n\n Introduceti noul pret: ");
+        setColorTo(5);
         scanf("%s", &pretNou);
+        setColorTo(0); // DEFAULT
         double corect = atof(pretNou);
         if(corect <= 0 || corect >= 100000)
         {
+            setColorTo(1); // ROSU
             printf("\nACEST PRET NU ESTE VALID\n");
-            printf("INCEARCA IAR\n\n");
+            printf("INCEARCA IAR");
+            setColorTo(0); // DEFAULT
         }else{
             flag = 0;
             sprintf(pretNou, "%.2f", corect); // float to string

@@ -8,7 +8,9 @@ void confirmaComanda()
     if(myPrice <= 0.0) // varificam daca este vre-un produs in cos
     {
         system("CLS");
+        setColorTo(1); // ROSU
         printf("\n\n NU AI NICI UN PRODUS IN COS \n\n");
+        setColorTo(0); // DEFAULT
         system("pause");
         return; // Daca nu avem produse in cos nu trimite nici o comanda
     }
@@ -17,11 +19,17 @@ void confirmaComanda()
     sprintf(myPriceChar, "%.2f", myPrice);
     
     system("CLS");
-    printf("\n\n  PRET FINAL: %.2lf\n\n", myPrice);
+    setColorTo(4); // GALBEN
+    printf("\n\n  PRET FINAL: ");
+    setColorTo(2); // VERDE
+    printf("%.2lf\n\n", myPrice);
 
+    setColorTo(4); // GALBEN
     printf("  DORITI SA PLASATI COMANDA?\n\n"); // Vedem daca utilizatorul chiar vrea sa trimita comanda
+    setColorTo(6); // CYAN
     printf("  Apasa 1 pentru DA \n");
     printf("  Apasa 2 pentru NU\n\n");
+    setColorTo(0); // DEFAULT
 
     int flagConfirm = 1;
 

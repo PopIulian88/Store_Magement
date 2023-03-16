@@ -21,9 +21,15 @@ int adaugaCosPleb(int myPosition, int addCantitate) // Adauga cantitatea, iar da
         char pretActualizat[100000];
         
         do{ // Verificari pentru Cantitate
-            printf("Cantitarea MAXIMA: %s\n\n", oldCantitate);
+            setColorTo(4); // GALBEN
+            printf("Cantitarea MAXIMA: ");
+            setColorTo(2); // VERDE
+            printf("%s\n\n", oldCantitate);
+            setColorTo(6); // CYAN
             printf("Introdu cantitatea dorita: ");
+            setColorTo(5); // ROZ
             scanf("%s", &cantitateNoua);
+            setColorTo(0); // DEFAULT
             int cantitateaDorita = atoi(cantitateNoua); // Cantitatea dorita/posibila
             int cantitateaMaxima = atoi(oldCantitate);
 
@@ -31,8 +37,10 @@ int adaugaCosPleb(int myPosition, int addCantitate) // Adauga cantitatea, iar da
 
             if(cantitateaDorita <= 0 || cantitateaDorita > cantitateaMaxima)
             {
+                setColorTo(1); // ROSU
                 printf("\nACEASTA CANTITATE NU POATE FI PLASATA\n");
                 printf("INCEARCA DIN NOU\n\n");
+                setColorTo(0); // DEFAULT
             }else{
                             
                 flagCantitate = 0;

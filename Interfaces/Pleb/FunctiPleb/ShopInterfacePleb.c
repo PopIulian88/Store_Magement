@@ -33,9 +33,12 @@ void shopInterfacePleb()
     if(produsActual > 0) // Produsul ales urmeaza sa fie adaugat in cos
     {
         system("CLS");
-        printf("\n\n DORITI SA ADAUGATI IN COS?\n\n");
+        setColorTo(4); // GALBEN
+        printf("\n DORITI SA ADAUGATI IN COS?\n\n");
+        setColorTo(6); // CYAN
         printf("  Apasa 1 pentru DA \n");
         printf("  Apasa 2 pentru NU\n\n");
+        setColorTo(0); // DEFAUTL
 
         int flagConfirm = 1;
 
@@ -57,7 +60,9 @@ void shopInterfacePleb()
                         system("pause");
                     }else{ // daca nu a fost finalizat cu succes
                         system("CLS");
+                        setColorTo(1);// ROSU
                         printf("\n\n  STOC EPUIZAT\n\n");
+                        setColorTo(0); // DEFAULT
                         system("pause");
                     }
 
